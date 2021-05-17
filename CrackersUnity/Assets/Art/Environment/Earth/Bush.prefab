@@ -95,6 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleBase: 0.8
-  XVariation: 0.6
-  YVariation: 0.3
-  FlipRandomlyOnX: 1
+  xVariation: 0.65
+  yVariation: 0.53
+  flipRandomlyOnX: 0
