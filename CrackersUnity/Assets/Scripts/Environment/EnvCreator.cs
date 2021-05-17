@@ -30,19 +30,19 @@ namespace Crackers
         }
 #endif
 
-        [SerializeField] private int numObjects = 10;
-        [SerializeField] private List<EnvObject> spawnable = new List<EnvObject>();
+        [SerializeField] private int _numObjects = 10;
+        [SerializeField] private List<EnvObject> _spawnable = new List<EnvObject>();
 
         public void Populate()
         {
-            if (spawnable.Count > 0)
+            if (_spawnable.Count > 0)
             {
-                for (int i = 0; i < numObjects; ++i)
+                for (int i = 0; i < _numObjects; ++i)
                 {
                     // Collect new object information
-                    EnvObject template = spawnable[Random.Range(0, spawnable.Count)];
-                    float x = Random.Range(0, bounds.x) - bounds.x / 2;
-                    float y = Random.Range(0, bounds.y) - bounds.y / 2;
+                    EnvObject template = _spawnable[Random.Range(0, _spawnable.Count)];
+                    float x = Random.Range(0, _bounds.x) - _bounds.x / 2;
+                    float y = Random.Range(0, _bounds.y) - _bounds.y / 2;
 
                     // Create and position object
                     EnvObject newObj = GameObject.Instantiate(template, this.transform);

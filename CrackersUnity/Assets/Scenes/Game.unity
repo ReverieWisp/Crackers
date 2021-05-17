@@ -165,10 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1878072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -269,10 +269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &25880844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -367,10 +367,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &45683329
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -465,10 +465,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &81982190
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -626,6 +626,36 @@ PrefabInstance:
       propertyPath: speed
       value: 0.28
       objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _resetBounds
+      value: 
+      objectReference: {fileID: 818637649}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _speed
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _scaleBase
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _xVariation
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _yVariation
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _flipRandomlyOnX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8948830926419413848, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
         type: 3}
       propertyPath: m_Name
@@ -752,10 +782,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &122020054
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -862,10 +892,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &152430860
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -960,10 +990,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &228661331
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1058,10 +1088,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &229489615
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1156,10 +1186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &284912682
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1317,6 +1347,36 @@ PrefabInstance:
       propertyPath: speed
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _resetBounds
+      value: 
+      objectReference: {fileID: 818637649}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _speed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _scaleBase
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _xVariation
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _yVariation
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _flipRandomlyOnX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8948830926419413848, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
         type: 3}
       propertyPath: m_Name
@@ -1437,10 +1497,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &365031729
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1535,10 +1595,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &454139071
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1633,10 +1693,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &540833577
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1731,10 +1791,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &586496227
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1820,11 +1880,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acde10cd5423f6448bc3a54e90a67df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundsColor: {r: 0.13756847, g: 1, b: 0, a: 0.5}
-  debugDrawBounds: 1
-  bounds: {x: 24, y: 0.2}
-  numObjects: 40
-  spawnable:
+  _boundsColor: {r: 0.13756847, g: 1, b: 0, a: 0.5}
+  _debugDrawBounds: 1
+  _bounds: {x: 24, y: 0.2}
+  _numObjects: 40
+  _spawnable:
   - {fileID: 1576005726, guid: bb20e6b97827ef94b864a2ec147bdd24, type: 3}
   - {fileID: 7601819932532524210, guid: cea5edf2d5aa9dc4e9e90c33bb802a50, type: 3}
 --- !u!4 &698935601
@@ -1996,10 +2056,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &744788496
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2094,10 +2154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &752775019
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2191,9 +2251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad38d81f4ef8ee489b0ad43637ef15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundsColor: {r: 1, g: 0, b: 1, a: 0.5}
-  debugDrawBounds: 1
-  bounds: {x: 24, y: 14}
+  _boundsColor: {r: 1, g: 0, b: 1, a: 0.5}
+  _debugDrawBounds: 1
+  _bounds: {x: 24, y: 14}
 --- !u!1 &825390689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,10 +2298,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &825390692
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2336,10 +2396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &829739681
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2396,6 +2456,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1101129446}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &910718705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910718708}
+  - component: {fileID: 910718707}
+  - component: {fileID: 910718706}
+  m_Layer: 0
+  m_Name: LevelEventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &910718706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910718705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &910718707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910718705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &910718708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910718705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951227486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,10 +2566,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &951227489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2611,8 +2737,136 @@ PrefabInstance:
       propertyPath: speed
       value: 0.22
       objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _resetBounds
+      value: 
+      objectReference: {fileID: 818637649}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _speed
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _scaleBase
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _xVariation
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _yVariation
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _flipRandomlyOnX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832559f70f9752b409d2f425361c9ff7, type: 3}
+--- !u!1 &1010246130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010246134}
+  - component: {fileID: 1010246133}
+  - component: {fileID: 1010246132}
+  - component: {fileID: 1010246131}
+  m_Layer: 5
+  m_Name: LevelCanvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1010246131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010246130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1010246132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010246130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1010246133
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010246130}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1010246134
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010246130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1012304579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,10 +2911,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1012304582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2755,10 +3009,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1015249898
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2921,6 +3175,36 @@ PrefabInstance:
       propertyPath: speed
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _resetBounds
+      value: 
+      objectReference: {fileID: 818637649}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _speed
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _scaleBase
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _xVariation
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _yVariation
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _flipRandomlyOnX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832559f70f9752b409d2f425361c9ff7, type: 3}
 --- !u!1 &1153603783
@@ -2967,10 +3251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1153603786
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3065,10 +3349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1165891536
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3163,10 +3447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1184526154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3261,10 +3545,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1216916360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3365,10 +3649,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1257962706
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3538,10 +3822,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1283888132
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3636,10 +3920,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1293067703
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3734,10 +4018,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1318055769
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3969,6 +4253,36 @@ PrefabInstance:
       propertyPath: speed
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _resetBounds
+      value: 
+      objectReference: {fileID: 818637649}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _speed
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _scaleBase
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _xVariation
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _yVariation
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333971106054225019, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
+        type: 3}
+      propertyPath: _flipRandomlyOnX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8948830926419413848, guid: 6adb0d901ce7ff741b3b3781a4b83a41,
         type: 3}
       propertyPath: m_Name
@@ -4026,10 +4340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1367073040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4124,10 +4438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1373300193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4214,7 +4528,7 @@ Transform:
   - {fileID: 698935601}
   - {fileID: 744296733}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411606380
 GameObject:
@@ -4260,10 +4574,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1411606383
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4358,10 +4672,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1434808776
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4456,10 +4770,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1507526137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4554,10 +4868,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1600920302
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5883,10 +6197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1700098756
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5937,6 +6251,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1763223744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763223745}
+  - component: {fileID: 1763223747}
+  - component: {fileID: 1763223746}
+  m_Layer: 0
+  m_Name: Core
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1763223745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763223744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763223746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763223744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2661cd1ba09334cae4b43ab1372063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1763223747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763223744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3832a383f273741823e15e39c41443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameplayCamera: {fileID: 2123367903}
+  _assets: {fileID: 11400000, guid: 1a034125fb14c5149ba7c123f57e21cf, type: 2}
 --- !u!1 &1765292364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5981,10 +6353,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1765292367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6079,10 +6451,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.8
-  xVariation: 0.65
-  yVariation: 0.53
-  flipRandomlyOnX: 0
+  _scaleBase: 0.8
+  _xVariation: 0.65
+  _yVariation: 0.53
+  _flipRandomlyOnX: 0
 --- !u!212 &1822649265
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6177,10 +6549,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &1874899330
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6281,10 +6653,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &2016050575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6452,6 +6824,36 @@ PrefabInstance:
       propertyPath: speed
       value: 0.31
       objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _resetBounds
+      value: 
+      objectReference: {fileID: 818637649}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _speed
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _scaleBase
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _xVariation
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _yVariation
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874852740928360240, guid: 832559f70f9752b409d2f425361c9ff7,
+        type: 3}
+      propertyPath: _flipRandomlyOnX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 832559f70f9752b409d2f425361c9ff7, type: 3}
 --- !u!4 &2052349857 stripped
@@ -6573,10 +6975,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4126fe96289c2164197ecd4e580594b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleBase: 0.9
-  xVariation: 0.67
-  yVariation: 0.52
-  flipRandomlyOnX: 0
+  _scaleBase: 0.9
+  _xVariation: 0.67
+  _yVariation: 0.52
+  _flipRandomlyOnX: 0
 --- !u!212 &2060876150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6661,7 +7063,7 @@ Transform:
   - {fileID: 1360123224}
   - {fileID: 1221229459}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2097955090
 PrefabInstance:

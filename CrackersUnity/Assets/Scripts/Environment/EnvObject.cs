@@ -27,19 +27,19 @@ namespace Crackers
 #endif
 
         [Header("Scale settings")]
-        [SerializeField] private float scaleBase = 0.1f;
-        [Range(0, 1)] [SerializeField] private float xVariation = 0.05f;
-        [Range(0, 1)] [SerializeField] private float yVariation = 0.05f;
-        [SerializeField] private bool flipRandomlyOnX = false;
+        [SerializeField] private float _scaleBase = 0.1f;
+        [Range(0, 1)] [SerializeField] private float _xVariation = 0.05f;
+        [Range(0, 1)] [SerializeField] private float _yVariation = 0.05f;
+        [SerializeField] private bool _flipRandomlyOnX = false;
 
         public void RandomizeScale(float globalScalar = 1f)
         {
             // Scale
-            float xScale = scaleBase + (Random.Range(0, xVariation) - xVariation / 2);
-            float yScale = scaleBase + (Random.Range(0, yVariation) - yVariation / 2);
+            float xScale = _scaleBase + (Random.Range(0, _xVariation) - _xVariation / 2);
+            float yScale = _scaleBase + (Random.Range(0, _yVariation) - _yVariation / 2);
 
             bool doXFlip = false;
-            if(flipRandomlyOnX)
+            if(_flipRandomlyOnX)
             {
                 if(Random.Range(0, 1.0f) > 0.5f)
                 {
