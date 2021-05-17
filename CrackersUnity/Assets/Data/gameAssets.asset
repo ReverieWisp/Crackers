@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b748499382deb644aecea0e3907cbdb, type: 3}
   m_Name: gameAssets
   m_EditorClassIdentifier: 
-  LineTemplate: {fileID: 3325493642744192371, guid: fd6352386f3c4cb4691dae9d453888ae,
+  LineTemplate: {fileID: 8249333533781857885, guid: fd6352386f3c4cb4691dae9d453888ae,
     type: 3}
   Borb: {fileID: -1926191010735368877, guid: ff20722ad77094249a437219185fb049, type: 3}

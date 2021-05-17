@@ -41,6 +41,14 @@ namespace Crackers
 
             return null;
         }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (_state != BorbState.LaunchReady )
+            {
+                SetState(BorbState.Crash);
+            }
+        }
     }
 
     [System.Serializable]

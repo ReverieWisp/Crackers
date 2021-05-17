@@ -7,66 +7,100 @@ namespace Crackers
 {
     public class BorbLauncher : CrackersMonoBehaviour
     {
+        // Inspector variables
+        [SerializeField] private float BorbLaunchSpeedScalar = 5.0f;
+
+        // Internal variables
         private Vector2 _startPos;
         private Vector2 _endPos;
-        private LineRenderer _lineBoi;
+        private PreviewLine _lineBoi;
         private Borb _borbPreview;
         private List<Borb> _activeBorbs;
 
+        // Utility properties
+        private Vector2 Direction => _startPos - _endPos;
+        private Vector2 Normalized => Direction.normalized;
+        private float Angle => Mathf.Atan2(_startPos.y - _endPos.y, _startPos.x - _endPos.x) * Mathf.Rad2Deg;
+        private float Magnitude => Direction.magnitude;
+
+
+
+        // Configure defaultss
         private void Awake()
         {
             _activeBorbs = new List<Borb>();
+            _startPos = Vector2.zero;
+            _endPos = Vector2.zero;
+            _lineBoi = null;
+            _borbPreview = null;
         }
 
-        private void Start()
+        // Event connect/reconnect
+        private void OnEnable()
         {
-            Game.Input.OnPrimaryActionStart += (pos) =>
-            {
-                _startPos = pos;
-                _endPos = pos;
+            Game.Input.OnPrimaryActionStart += BeginPreview;
+            Game.Input.OnPrimaryActionPersist += UpdatePreview;
+            Game.Input.OnPrimaryActionAccept += LaunchBorb;
+        }
 
-                CleanVisible();
+        // Event disconnect
+        private void OnDisable()
+        {
+            Game.Input.OnPrimaryActionAccept -= LaunchBorb;
+            Game.Input.OnPrimaryActionPersist -= UpdatePreview;
+            Game.Input.OnPrimaryActionStart -= BeginPreview;
+        }
 
-                _lineBoi = Game.Assets.Create(Game.Assets.LineTemplate);
-                _borbPreview = Game.Assets.Create(Game.Assets.Borb);
-                _borbPreview.SetState(BorbState.LaunchReady);
+        private void BeginPreview(Vector2 inputPos)
+        {
+            _startPos = inputPos;
+            _endPos = inputPos;
 
-                UpdateLinePos();
-                UpdateBorbPreview();
-            };
+            CleanVisible();
 
-            Game.Input.OnPrimaryActionPersist += (pos) =>
-            {
-                _endPos = pos;
+            _lineBoi = Game.Assets.Create(Game.Assets.LineTemplate);
+            _lineBoi.transform.position = _startPos;
 
-                UpdateLinePos();
-                UpdateBorbPreview();
-            };
+            _borbPreview = Game.Assets.Create(Game.Assets.Borb);
+            _borbPreview.SetState(BorbState.LaunchReady);
 
-            Game.Input.OnPrimaryActionAccept += (pos) =>
-            {
-                _borbPreview.SetState(BorbState.Fly);
-                _borbPreview.GetComponent<Rigidbody2D>().velocity = (_startPos - _endPos);
-                _activeBorbs.Add(_borbPreview);
-                _borbPreview = null;
+            UpdateLinePos();
+            UpdateBorbPreview();
+        }
 
-                CleanVisible();
-            };
+        private void UpdatePreview(Vector2 inputPos)
+        {
+            _endPos = inputPos;
+
+            UpdateLinePos();
+            UpdateBorbPreview();
+        }
+
+        private void LaunchBorb(Vector2 inputPos)
+        {
+            _endPos = inputPos;
+
+            _borbPreview.SetState(BorbState.Fly);
+            _borbPreview.GetComponent<Rigidbody2D>().velocity = Normalized * Magnitude * BorbLaunchSpeedScalar;
+            _activeBorbs.Add(_borbPreview);
+            _borbPreview = null;
+
+            CleanVisible();
         }
 
         private void UpdateLinePos()
         {
             if (_lineBoi != null)
             {
-                _lineBoi.SetPosition(0, _startPos);
-                _lineBoi.SetPosition(1, _endPos);
+                _lineBoi.Set(_startPos, _endPos);
             }
         }
 
         private void UpdateBorbPreview()
         {
             _borbPreview.transform.position = _endPos;
-            _borbPreview.transform.rotation = Quaternion.Euler(0, 0, Vector2.Angle(_startPos, _endPos));
+            _borbPreview.transform.rotation = Quaternion.Euler(0, 0, Angle);
+            _lineBoi.UpdateText(Angle, Angle);
         }
 
         private void CleanVisible()
