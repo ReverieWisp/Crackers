@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Crackers
 {
     /// <summary>
-    /// Collects all aspects of the game
+    /// Collects all aspects of the game for use as a singleton
     /// </summary>
     [System.Serializable]
     public class Game

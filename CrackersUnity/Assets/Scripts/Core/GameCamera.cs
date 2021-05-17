@@ -16,5 +16,4 @@ namespace Crackers
             this.Gameplay = orthoCamera;
         }
     }
-
 }

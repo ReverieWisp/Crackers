@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Crackers
 {
     /// <summary>
-    /// Contains static reference to the game, and handles startup/teardown
+    /// Contains static reference to the game, and handles startup/teardown.
     /// </summary>
     public class Core : MonoBehaviour
     {
@@ -13,15 +13,19 @@ namespace Crackers
         [SerializeField] private Camera _gameplayCamera;
         [SerializeField] private GameAssets _assets;
 
-        // Game singleton setup
+        /// <summary>
+        /// Game singleton variable and setup
+        /// </summary>
         public static Game Game { get; private set; }
         private void Awake()
         {
             Game = new Game(_gameplayCamera, _assets);
         }
 
-
-        // Update handling, etcs
+        /// <summary>
+        /// Update handling, etc. Use the return value of the game to determine
+        /// if we need to be leaving now.
+        /// </summary>
         private void Update()
         {
             if(!Game.Update())

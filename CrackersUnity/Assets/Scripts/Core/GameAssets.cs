@@ -12,7 +12,7 @@ namespace Crackers
     public class GameAssets : ScriptableObject
     {
         [Header("Prefabs")]
-        public PreviewLine LineTemplate;
+        public BorbLaunchPreview LineTemplate;
         public Borb Borb;
 
         public T Create<T>(T toMake) where T : UnityEngine.Object

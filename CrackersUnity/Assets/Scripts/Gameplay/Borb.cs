@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Crackers
 {
+    /// <summary>
+    /// THE borb
+    /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
     public class Borb : CrackersMonoBehaviour
     {
@@ -14,12 +17,19 @@ namespace Crackers
         private BorbState _state;
         private SpriteRenderer _spriteRenderer;
 
+        /// <summary>
+        /// Accumulate references and set defaults
+        /// </summary>
         private void Awake()
         {
             _state = BorbState.Idle;
             _spriteRenderer = this.GetComponent<SpriteRenderer>();
         }
 
+        /// <summary>
+        /// Fully configures the internal state and associated visuals of the borb
+        /// </summary>
+        /// <param name="desiredState"></param>
         public void SetState(BorbState desiredState)
         {
             Sprite toSet = GetSpriteForState(desiredState);
@@ -29,6 +39,11 @@ namespace Crackers
             }
         }
 
+        /// <summary>
+        /// Fish up what borb we're supposed to look like for a state
+        /// </summary>
+        /// <param name="state"></param>
+        /// <returns></returns>
         private Sprite GetSpriteForState(BorbState state)
         {
             foreach(BorbVisualPair pair in _visualConfig)
