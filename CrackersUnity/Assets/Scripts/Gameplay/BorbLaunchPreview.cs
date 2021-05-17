@@ -40,10 +40,16 @@ namespace Crackers
             _display.text = value;
         }
 
+        /// <summary>
+        /// Sets the desired world space locations of line preivew
+        /// </summary>
+        /// <param name="start">world-space start</param>
+        /// <param name="end">world-space end</param>
         public void Set(Vector2 start, Vector2 end)
         {
-            _line.SetPosition(0, start);
-            _line.SetPosition(1, end);
+            this.transform.position = start;
+            _line.SetPosition(0, Vector2.zero);
+            _line.SetPosition(1, end - start);
         }
     }
 }
