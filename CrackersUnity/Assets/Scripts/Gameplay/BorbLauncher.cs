@@ -8,7 +8,10 @@ namespace Crackers
     public class BorbLauncher : CrackersMonoBehaviour
     {
         // Inspector variables
-        [SerializeField] private float BorbLaunchSpeedScalar = 5.0f;
+        [SerializeField] private float _launchSpeedAtMax = 10.0f;
+        [SerializeField] private Transform _visualStart;
+        [SerializeField] private float _startDistance;
+        [SerializeField] private float _maxDragDistance = 5.0f;
 
         // Internal variables
         private Vector2 _startPos;
@@ -16,14 +19,15 @@ namespace Crackers
         private BorbLaunchPreview _lineBoi;
         private Borb _borbPreview;
         private List<Borb> _activeBorbs;
+        private bool _doingLaunch;
 
         // Utility properties
-        private Vector2 Direction => _startPos - _endPos;
-        private Vector2 Normalized => Direction.normalized;
-        private float Angle => Mathf.Atan2(_startPos.y - _endPos.y, _startPos.x - _endPos.x) * Mathf.Rad2Deg;
-        private float BorbMagnitude => Direction.magnitude * BorbLaunchSpeedScalar;
-
-
+        private Vector2 DragDifference => _endPos - _startPos;
+        private float DragMagnitude => DragDifference.magnitude;
+        private Vector2 DragDirection => DragDifference.normalized;
+        private float DragAngle => Mathf.Atan2(_startPos.y - _endPos.y, _startPos.x - _endPos.x) * Mathf.Rad2Deg;
+        private Vector2 SlingshotStart => _visualStart.position;
+        private float TVal => Mathf.Clamp(DragMagnitude / _maxDragDistance, 0.0f, 1.0f);
 
         /// <summary>
         /// Configure defaults
@@ -52,9 +56,12 @@ namespace Crackers
         /// </summary>
         private void OnDisable()
         {
-            Game.Input.OnPrimaryActionAccept -= LaunchBorb;
-            Game.Input.OnPrimaryActionPersist -= UpdatePreview;
-            Game.Input.OnPrimaryActionStart -= BeginPreview;
+            if (!IsShutdown)
+            {
+                Game.Input.OnPrimaryActionAccept -= LaunchBorb;
+                Game.Input.OnPrimaryActionPersist -= UpdatePreview;
+                Game.Input.OnPrimaryActionStart -= BeginPreview;
+            }
         }
 
         /// <summary>
@@ -64,19 +71,26 @@ namespace Crackers
         /// <param name="inputPos">initual input position for the event.</param>
         private void BeginPreview(Vector2 inputPos)
         {
-            _startPos = inputPos;
-            _endPos = inputPos;
+            if(Vector2.Distance(inputPos, _visualStart.transform.position) < _startDistance)
+            {
+                Vector2 slingshotStart = _visualStart.transform.position;
 
-            CleanVisible();
+                _startPos = inputPos;
+                _endPos = _startPos;
 
-            _lineBoi = Game.Assets.Create(Game.Assets.LineTemplate);
-            _lineBoi.transform.position = _startPos;
+                CleanVisible();
 
-            _borbPreview = Game.Assets.Create(Game.Assets.Borb);
-            _borbPreview.SetState(BorbState.LaunchReady);
+                _lineBoi = Game.Assets.Create(Game.Assets.LineTemplate);
+                _lineBoi.transform.position = _startPos;
 
-            UpdateLinePos();
-            UpdateBorbPreview();
+                _borbPreview = Game.Assets.Create(Game.Assets.Borb);
+                _borbPreview.SetState(BorbState.LaunchReady);
+
+                UpdateLinePos();
+                UpdateBorbPreview();
+
+                _doingLaunch = true;
+            }
         }
 
         /// <summary>
@@ -85,10 +99,13 @@ namespace Crackers
         /// <param name="inputPos">The current position of the input data (a held mouse position, for example)</param>
         private void UpdatePreview(Vector2 inputPos)
         {
-            _endPos = inputPos;
+            if (_doingLaunch)
+            {
+                _endPos = inputPos;
 
-            UpdateLinePos();
-            UpdateBorbPreview();
+                UpdateLinePos();
+                UpdateBorbPreview();
+            }
         }
 
         /// <summary>
@@ -97,29 +114,41 @@ namespace Crackers
         /// <param name="inputPos">The last known position of the input data (a held mouse or touch, for example)</param>
         private void LaunchBorb(Vector2 inputPos)
         {
-            _endPos = inputPos;
+            if (_doingLaunch)
+            {
+                _endPos = inputPos;
 
-            _borbPreview.SetState(BorbState.Fly);
-            _borbPreview.GetComponent<Rigidbody2D>().velocity = Normalized * BorbMagnitude;
-            _activeBorbs.Add(_borbPreview);
-            _borbPreview = null;
+                _borbPreview.SetState(BorbState.Fly);
+                _borbPreview.GetComponent<Rigidbody2D>().velocity = -DragDirection * TVal * _launchSpeedAtMax;
+                _activeBorbs.Add(_borbPreview);
+                _borbPreview = null;
 
-            CleanVisible();
+                CleanVisible();
+
+                _doingLaunch = false;
+            }
         }
 
         private void UpdateLinePos()
         {
             if (_lineBoi != null)
             {
-                _lineBoi.Set(_startPos, _endPos);
+                float dist = DragMagnitude;
+                if (dist > _maxDragDistance)
+                {
+                    dist = _maxDragDistance;
+                }
+
+                _lineBoi.Set(SlingshotStart, SlingshotStart + DragDirection * dist);
             }
         }
 
         private void UpdateBorbPreview()
         {
-            _borbPreview.transform.position = _endPos;
-            _borbPreview.transform.rotation = Quaternion.Euler(0, 0, Angle);
-            _lineBoi.UpdateText(string.Format("{0:0.0}", BorbMagnitude), Angle);
+            Vector2 offset = DragDirection * TVal * _maxDragDistance;
+            _borbPreview.transform.position = SlingshotStart + offset;
+            _borbPreview.transform.rotation = Quaternion.Euler(0, 0, DragAngle);
+            _lineBoi.UpdateText($"{(int)(TVal * 100)}%", DragAngle);
         }
 
         private void CleanVisible()

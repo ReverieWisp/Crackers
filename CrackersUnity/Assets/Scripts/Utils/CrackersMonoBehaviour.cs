@@ -10,5 +10,7 @@ namespace Crackers
     public class CrackersMonoBehaviour : MonoBehaviour
     {
         public Game Game => Core.Game;
+
+        public bool IsShutdown => !Core.HasGame();
     }
 }
