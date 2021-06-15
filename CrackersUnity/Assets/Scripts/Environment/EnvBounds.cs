@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Crackers
 {
     [ExecuteAlways]
-    public class EnvBounds : MonoBehaviour
+    public class EnvBounds : CrackersMonoBehaviour
     {
         [Header("Bounds Config")]
         [SerializeField] private Color _boundsColor = new Color(1, 0, 1, 0.5f);

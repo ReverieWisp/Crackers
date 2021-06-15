@@ -14,6 +14,8 @@ namespace Crackers
         public GameCamera Camera;
         public GameInput Input;
 
+        private EnvBounds _cameraBounds;
+
         public Game(Camera orthoCam, GameAssets assets)
         {
             Assets = assets;
