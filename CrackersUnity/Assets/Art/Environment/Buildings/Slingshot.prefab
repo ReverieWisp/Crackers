@@ -159,5 +159,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _launchSpeedAtMax: 15
   _visualStart: {fileID: 821834367275968172}
-  _startDistance: 3
+  _startDistance: 2
   _maxDragDistance: 1.9
