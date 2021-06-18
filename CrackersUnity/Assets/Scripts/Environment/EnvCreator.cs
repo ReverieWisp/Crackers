@@ -41,8 +41,8 @@ namespace Crackers
                 {
                     // Collect new object information
                     EnvObject template = _spawnable[Random.Range(0, _spawnable.Count)];
-                    float x = Random.Range(0, _bounds.x) - _bounds.x / 2;
-                    float y = Random.Range(0, _bounds.y) - _bounds.y / 2;
+                    float x = Random.Range(0, Bounds.x) - Bounds.x / 2;
+                    float y = Random.Range(0, Bounds.y) - Bounds.y / 2;
 
                     // Create and position object
                     EnvObject newObj = GameObject.Instantiate(template, this.transform);

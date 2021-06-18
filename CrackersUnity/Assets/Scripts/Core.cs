@@ -13,10 +13,12 @@ namespace Crackers
         [Header("Global Links")]
         [SerializeField] private Camera _gameplayCamera;
         [SerializeField] private GameAssets _assets;
+        [SerializeField] private string _toLoadFirst = "Menu";
 
         private static bool _performingJTL = false;
         private static string _sceneJTL = "";
         private static Game _game = null;
+        private static string _currentLoaded = null;
 
         public static IEnumerator PerformJustTooLateLoad()
         {
@@ -64,6 +66,12 @@ namespace Crackers
                 return _game;
             }
         }
+        
+        public static bool HasGame()
+        {
+            return _game != null;
+        }
+
         private void Awake()
         {
             if (_game == null)
@@ -72,9 +80,30 @@ namespace Crackers
             }
         }
 
-        public static bool HasGame()
+        private void Start()
         {
-            return _game != null;
+            if (!_performingJTL)
+            {
+                LoadLevel(_toLoadFirst);
+            }
+        }
+
+        public static void LoadLevel(string toLoad)
+        {
+            AsyncOperation unload = null;
+            if(!string.IsNullOrEmpty(_currentLoaded))
+            {
+                unload = SceneManager.UnloadSceneAsync(_currentLoaded, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
+            }
+
+            if(unload != null)
+            {
+                unload.completed += (_)=>
+                {
+                    SceneManager.LoadSceneAsync(toLoad, LoadSceneMode.Additive);
+                    _currentLoaded = toLoad;
+                };
+            }
         }
 
         /// <summary>
@@ -90,10 +119,20 @@ namespace Crackers
 #if UNITY_EDITOR
                     UnityEditor.EditorApplication.isPlaying = false;
 #else
-                Application.Quit();
+                    Application.Quit();
 #endif
                 }
             }
+        }
+
+        /// <summary>
+        /// A consistent update for only very specific types of fixed time operations.
+        /// do NOT use this or any subsequent updates for too much that's critical, 
+        /// use Time.DeltaTime instead. 
+        /// </summary>
+        private void FixedUpdate()
+        {
+            _game?.FixedUpdate();
         }
     }
 }

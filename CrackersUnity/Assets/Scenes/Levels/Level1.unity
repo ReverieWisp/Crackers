@@ -1904,7 +1904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _boundsColor: {r: 0.13756847, g: 1, b: 0, a: 0.5}
   _debugDrawBounds: 1
-  _bounds: {x: 24, y: 0.2}
+  Bounds: {x: 24, y: 0.2}
   _numObjects: 40
   _spawnable:
   - {fileID: 1576005726, guid: bb20e6b97827ef94b864a2ec147bdd24, type: 3}
@@ -2239,6 +2239,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1382653218}
     m_Modifications:
+    - target: {fileID: -3633262590602111266, guid: 57015da5788b8774c99e51c0529de547,
+        type: 3}
+      propertyPath: _startDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6139111690371188116, guid: 57015da5788b8774c99e51c0529de547,
         type: 3}
       propertyPath: m_Name
@@ -2311,6 +2316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 818637648}
   - component: {fileID: 818637649}
+  - component: {fileID: 818637650}
   m_Layer: 0
   m_Name: LevelBounds
   m_TagString: Untagged
@@ -2346,7 +2352,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _boundsColor: {r: 1, g: 0, b: 1, a: 0.5}
   _debugDrawBounds: 1
-  _bounds: {x: 24, y: 14}
+  Bounds: {x: 24, y: 14}
+--- !u!114 &818637650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818637647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e787539fc1290884e8df063067c4502b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _boundsToUse: {fileID: 818637649}
 --- !u!1 &825390689
 GameObject:
   m_ObjectHideFlags: 0

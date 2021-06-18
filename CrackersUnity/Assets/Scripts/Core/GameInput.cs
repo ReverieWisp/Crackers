@@ -16,12 +16,15 @@ namespace Crackers
         public System.Action<Vector2> OnPrimaryActionAccept;
         public System.Action<Vector2> OnPrimaryActionCancel_NEVER_CALLED;
 
+        public Vector2 InputPosition;
+
         // Internal
         private GameCamera camera;
 
         public GameInput(Game game)
         {
             this.camera = game.Camera;
+            InputPosition = UnityEngine.Input.mousePosition;
         }
 
         public bool Update()
@@ -40,6 +43,8 @@ namespace Crackers
             {
                 OnPrimaryActionAccept?.Invoke(InputInWorld());
             }
+
+            InputPosition = UnityEngine.Input.mousePosition;
 
             return true;
         }

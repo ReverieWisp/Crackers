@@ -10,7 +10,7 @@ namespace Crackers
     /// Derive from this class and override OnClicked
     /// </summary>
     [RequireComponent(typeof(Button))]
-    public class UIButton : CrackersMonoBehaviour
+    public abstract class UIButton : CrackersMonoBehaviour
     {
         // Internal Variables
         protected Button _button;
@@ -20,7 +20,7 @@ namespace Crackers
         /// <summary>
         /// Happens before anything else
         /// </summary>
-        private void Awake()
+        protected void Awake()
         {
             _button = this.gameObject.GetComponent<Button>();
         }
@@ -28,7 +28,7 @@ namespace Crackers
         /// <summary>
         /// Happens after Awake but before Start, and each consecutive enable/disable
         /// </summary>
-        private void OnEnable()
+        protected void OnEnable()
         {
             _button.onClick.AddListener(OnClicked);
         }
@@ -36,7 +36,7 @@ namespace Crackers
         /// <summary>
         /// Happens with each disable, and before OnDestroy. Good form to remove listeners here to prevent unwanted calls.
         /// </summary>
-        private void OnDisable()
+        protected void OnDisable()
         {
             _button.onClick.RemoveListener(OnClicked);
         }
@@ -44,9 +44,6 @@ namespace Crackers
         /// <summary>
         /// Called when the button is pressed, while enabled.
         /// </summary>
-        protected virtual void OnClicked()
-        {
-            // Override this in a derived class
-        }
+        protected abstract void OnClicked();
     }
 }

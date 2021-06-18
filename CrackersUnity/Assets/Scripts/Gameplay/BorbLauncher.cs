@@ -21,6 +21,14 @@ namespace Crackers
         private List<Borb> _activeBorbs;
         private bool _doingLaunch;
 
+        // World variables
+        private float _camPositionStartX;
+        private float _camInputXStart;
+        private float _camLastXInput;
+        private float _camVelocity;
+        private float _lastNonZero;
+        private float _speedScalar = 12;
+
         // Utility properties
         private Vector2 DragDifference => _endPos - _startPos;
         private float DragMagnitude => DragDifference.magnitude;
@@ -73,8 +81,6 @@ namespace Crackers
         {
             if(Vector2.Distance(inputPos, _visualStart.transform.position) < _startDistance)
             {
-                Vector2 slingshotStart = _visualStart.transform.position;
-
                 _startPos = inputPos;
                 _endPos = _startPos;
 
@@ -91,6 +97,14 @@ namespace Crackers
 
                 _doingLaunch = true;
             }
+            else
+            {
+                Game.Camera.SetCameraVelocity(0);
+                float curX = Game.Input.InputPosition.x;
+                _camInputXStart = curX;
+                _camLastXInput = 0;
+                _camPositionStartX = Game.Camera.Gameplay.transform.position.x;
+            }
         }
 
         /// <summary>
@@ -105,6 +119,27 @@ namespace Crackers
 
                 UpdateLinePos();
                 UpdateBorbPreview();
+            }
+            else
+            {
+                float curX = Game.Input.InputPosition.x;
+                float offset = _camInputXStart - curX;
+                Game.Camera.SetCameraX(_camPositionStartX + (offset / Game.Camera.PixelsPerWorldUnit.x));
+
+                float difference = _camLastXInput - curX;
+
+                // 0.5f because fractional pixels aren't a thing for input.
+                if (Mathf.Abs(difference) > 0.5f)
+                {
+                    _camVelocity = difference;
+                    _lastNonZero = Time.realtimeSinceStartup;
+                }
+
+                if(Time.realtimeSinceStartup - _lastNonZero > 0.2f)
+                {
+                    _camVelocity = 0;
+                }
+                _camLastXInput = curX;
             }
         }
 
@@ -126,6 +161,10 @@ namespace Crackers
                 CleanVisible();
 
                 _doingLaunch = false;
+            }
+            else
+            {
+                Game.Camera.SetCameraVelocity(_camVelocity / Game.Camera.PixelsPerWorldUnit.x * _speedScalar);
             }
         }
 

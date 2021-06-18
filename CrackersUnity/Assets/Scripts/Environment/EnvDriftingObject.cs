@@ -55,8 +55,8 @@ namespace Crackers
             // See if we need to loop! This is when we're fully off the screen to the left.
             float rightOfObject = _objWidth - _objPivotX;
             float leftOfObject = (1 - _objPivotX / _objWidth) * _objWidth;
-            float leftResetThresholdX = _resetBounds.transform.position.x - _resetBounds._bounds.x / 2;
-            float rightResetTargetX = _resetBounds.transform.position.x + _resetBounds._bounds.x / 2 + leftOfObject;
+            float leftResetThresholdX = _resetBounds.transform.position.x - _resetBounds.Bounds.x / 2;
+            float rightResetTargetX = _resetBounds.transform.position.x + _resetBounds.Bounds.x / 2 + leftOfObject;
 
             if (this.transform.position.x + rightOfObject < leftResetThresholdX)
             {

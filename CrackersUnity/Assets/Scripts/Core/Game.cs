@@ -14,8 +14,6 @@ namespace Crackers
         public GameCamera Camera;
         public GameInput Input;
 
-        private EnvBounds _cameraBounds;
-
         public Game(Camera orthoCam, GameAssets assets)
         {
             Assets = assets;
@@ -23,13 +21,26 @@ namespace Crackers
             Input = new GameInput(this);
         }
 
-        // Returns if all is running well.
+        /// <summary>
+        /// Returns if all is running well. This is the primary update loop.
+        /// </summary>
+        /// <returns></returns>
         public bool Update()
         {
             bool cleanUpdate = true;
+            
             cleanUpdate &= Input.Update();
+            cleanUpdate &= Camera.Update();
 
             return cleanUpdate;
+        }
+
+        /// <summary>
+        /// Called only at regular intervals
+        /// </summary>
+        public void FixedUpdate()
+        {
+            Camera?.FixedUpdate();
         }
     }
 }
