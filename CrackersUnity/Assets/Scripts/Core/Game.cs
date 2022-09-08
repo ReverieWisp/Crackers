@@ -14,6 +14,9 @@ namespace Crackers
         public GameCamera Camera;
         public GameInput Input;
 
+        public bool MenuIsVisible = true;
+        public System.Action CrackersAcquired;
+
         public Game(Camera orthoCam, GameAssets assets)
         {
             Assets = assets;

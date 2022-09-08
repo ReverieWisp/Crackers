@@ -63,6 +63,13 @@ namespace Crackers
             {
                 SetState(BorbState.Crash);
             }
+
+            // If a cracker is involved...
+            if (collision.collider.gameObject.tag.Contains("cracker"))
+            {
+                Destroy(collision.collider.gameObject);
+                Game.CrackersAcquired?.Invoke();
+            }
         }
     }
 

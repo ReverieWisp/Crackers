@@ -104,6 +104,11 @@ namespace Crackers
                     _currentLoaded = toLoad;
                 };
             }
+            else
+            {
+                SceneManager.LoadSceneAsync(toLoad, LoadSceneMode.Additive);
+                _currentLoaded = toLoad;
+            }
         }
 
         /// <summary>

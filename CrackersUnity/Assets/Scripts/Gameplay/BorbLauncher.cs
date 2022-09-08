@@ -79,6 +79,11 @@ namespace Crackers
         /// <param name="inputPos">initual input position for the event.</param>
         private void BeginPreview(Vector2 inputPos)
         {
+            if(Game.MenuIsVisible)
+            {
+                return;
+            }
+
             if(Vector2.Distance(inputPos, _visualStart.transform.position) < _startDistance)
             {
                 _startPos = inputPos;
@@ -113,6 +118,11 @@ namespace Crackers
         /// <param name="inputPos">The current position of the input data (a held mouse position, for example)</param>
         private void UpdatePreview(Vector2 inputPos)
         {
+            if (Game.MenuIsVisible)
+            {
+                return;
+            }
+
             if (_doingLaunch)
             {
                 _endPos = inputPos;
@@ -149,6 +159,11 @@ namespace Crackers
         /// <param name="inputPos">The last known position of the input data (a held mouse or touch, for example)</param>
         private void LaunchBorb(Vector2 inputPos)
         {
+            if (Game.MenuIsVisible)
+            {
+                return;
+            }
+
             if (_doingLaunch)
             {
                 _endPos = inputPos;
